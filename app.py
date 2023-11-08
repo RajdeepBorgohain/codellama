@@ -13,7 +13,6 @@ class InferlessPythonModel:
       self.model = AutoGPTQForCausalLM.from_quantized(
         "TheBloke/CodeLlama-34B-Python-GPTQ",
         use_safetensors=True,
-        device="cuda:0",
         use_triton=True,
         quantize_config=None,
         inject_fused_attention=False
